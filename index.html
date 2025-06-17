@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sohail | Unreal Dev</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Font for modern feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons (optional) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header id="navbar">
+        <div class="logo">Sohail Shaikh</div>
+        <nav>
+            <a href="#">Home</a>
+            <!-- <a href="#about">About</a> -->
+            <a href="#projects" class="scroll-button">Projects</a>
+            <!-- <a href="#skills">skills</a> -->
+            <a href="#experience">Experience</a>
+            <!-- <a href="#education">Education</a> -->
+            <!-- <a href="#certificates">Certificates</a> -->
+            <a href="#footer">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Heading Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Unreal Game Developer</h1>
+            <p>Crafting high-quality gameplay powered by Unreal Engine</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>
+                    Hi, I’m Sohail Shaikh, a passionate and skilled Game Developer with 1.5 years of experience working
+                    in
+                    Unreal Engine 5, specializing in both Blueprint scripting and C++ programming. I hold a Bachelor’s
+                    degree in Computer Science with a strong academic record (GPA: 8.91) and over 4 years of coding
+                    experience, which gives me a deep understanding of software development principles and game logic.
+                    <br><br>
+                    I’m driven by a love for building engaging, interactive, and technically sound game experiences.
+                    From
+                    gameplay mechanics and UI systems to performance optimization and debugging, I focus on delivering
+                    polished, efficient, and immersive experiences. I take pride in writing clean, modular code and
+                    continuously expanding my knowledge of game engine architecture and development workflows.
+                    <br><br>
+                    Currently, I’m focused on improving my skills in advanced Unreal Engine systems, including
+                    animation,
+                    AI, and multiplayer features. I’m always eager to take on new challenges, work with passionate
+                    teams,
+                    and contribute to meaningful, creative projects in the game industry.
+                    <br><br>
+                    Let’s connect and create something amazing!
+                </p>
+            </div>
+            <div class="about-image">
+                <img src="/Images/NormalPic.jpg" alt="Sohail Shaikh">
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="projects-image">
+
+            <h2>My Gaming Projects</h2>
+
+            <div class="carousel-container">
+                <button class="arrow left" onclick="scrollProjects('left')">&#10094;</button>
+
+                <div class="carousel" id="projectCarousel">
+
+                    <!-- WildWoodAdvanture -->
+                    <a href="\WildwoodAdventures.html" style="text-decoration: none; color: inherit;">
+                        <div class="project-card">
+                            <img src="/Images/WildwoodAdventure.png" alt="Project 1" />
+                            <h3>Wildwood Adventure</h3>
+                            <p>My first unreal game 2D platformer where you have 2 modes: one endless and one normal
+                                challenging mode with 3 levels. It includes controller support, haptic feedback, and a
+                                tutorial level to understand the controls.</p>
+                        </div>
+                    </a>
+
+                    <!-- Zombie Apocalypse -->
+                    <a href="Zombie Apocalypse.html" style="text-decoration: none; color: inherit;">
+                        <div class="project-card">
+                            <img src="/Images/ZombieApocalypse.png" alt="Project 1" />
+                            <h3>Zombie Apocalypse: The EndlessRunner</h3>
+                            <p>My First 3D 'Zombie Apocalypse,' a endless runner game in UE5 with diverse environments,
+                                power-ups, and customizable characters. Implemented mechanics like zombie attacks, coin
+                                collection, health regeneration, and a high-score system</p>
+                        </div>
+                    </a>
+
+                    <!-- Runner of God -->
+                    <a href="RunnerOfGod.html" style="text-decoration: none; color: inherit;">
+                        <div class="project-card">
+                            <img src="/Images/RunnerOfGod1.png" alt="Project 1" />
+                            <h3>Runner of GOD</h3>
+                            <p>Developed an Unreal Engine-based 3D endless runner game using C++ and Blueprints. The
+                                game features Kratos chasing Hades, with unique axes and power-ups enhancing gameplay.
+                                Designed immersive environments and dynamic mechanics inspired by the God of War series.
+                            </p>
+                        </div>
+                    </a>
+
+                    <!-- Flappy Bird -->
+                    <a href="FlappyBird.html" style="text-decoration: none; color: inherit;">
+                        <div class="project-card">
+                            <img src="/Images/FlappyBird.png" alt="Project 1" />
+                            <h3>FlappyBird in Unity</h3>
+                            <p>A Unity-based Flappy Bird game where players navigate a bird through obstacles, featuring
+                                smooth controls and engaging gameplay. This project showcases basic game development
+                                skills and Unity's 2D capabilities.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Right Swipe navigation buttons -->
+                <button class="arrow right" onclick="scrollProjects('right')">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <h2>Softwares, Languages, Engine Worked on</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <h3>Unreal Engine 5</h3>
+                <p>Blueprint Scripting, C++, Cinematics, UI, AI, Multiplayer, Optimization, Level Designing, Mechanics,
+                    Logic Building</p>
+            </div>
+            <div class="skill">
+                <h3>Web Programming</h3>
+                <p>HTML, CSS, C, C++, C#, Python, JS, PHP, Java, Node, React, Anguler, JQuery, AJAX, SQL, NO-SQL,
+                    ASP.NET</p>
+            </div>
+            <div class="skill">
+                <h3>Databases</h3>
+                <p> MySQL, MongoDB, PhpMyAdmin, SQLServerManager, Fire-Base, SQL-Lite.</p>
+            </div>
+            <div class="skill">
+                <h3>App development</h3>
+                <p>Android Studio, Java, React Nativep</p>
+            </div>
+            <div class="skill">
+                <h3>Operating System Worked On</h3>
+                <p>Windows, Ubuntu, Kali</p>
+            </div>
+            <div class="skill">
+                <h3>Designing & Editing</h3>
+                <p>Figma, Canva, Lightroom, Picsart, MS Office, Photoshop, Vn.</p>
+            </div>
+            <div class="skill">
+                <h3>Soft Skills</h3>
+                <p>Teamwork, Communication Skills, Management Skills, Problem-Solving Skills, Leadership Skills, etc.
+                </p>
+            </div>
+            <div class="skill">
+                <h3>Other Skills</h3>
+                <p>Cloud Computing, Virtualization, Cyber Security, IOT, Ethical Hacking , Computer Hardware.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <h2>Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Game Development Intern - Unreal Engine</h3>
+                    <span class="date">Feb 2025 - May 2025</span>
+                    <p>
+                        Developed a multiplayer game set in Mumbai, handling level design, gameplay logic, and LAN
+                        multiplayer with
+                        session management and replication. Coded a fully functional character with complete animations.
+                        Integrated
+                        Unreal Engine with a database for login and data handling, and implemented car mechanics,
+                        shooting systems,
+                        and inventory item pickups. This helped strengthen my skills in multiplayer systems, animation
+                        integration, and
+                        gameplay development
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <div class="education-bg">
+            <div class="education-overlay"></div>
+            <div class="education-container">
+                <h2>Education</h2>
+
+                <div class="education-item">
+                    <h3>Unreal Pro Game Development</h3>
+                    <span class="date">2024 - 2025</span>
+                    <p>
+                        Projects completed: <strong>4</strong><br>
+                        Game Institute, Ghatkopar, Mumbai
+                    </p>
+                </div>
+
+                <div class="education-item">
+                    <h3>Bachelor of Science in Computer Science</h3>
+                    <span class="date">2021 - 2024</span>
+                    <p>
+                        CGPA: <strong>8.91</strong><br>
+                        Ruia College, Matunga, Mumbai
+                    </p>
+                </div>
+
+                <div class="education-item">
+                    <h3>HSC - Science</h3>
+                    <span class="date">2019 - 2020</span>
+                    <p>
+                        Bhavans College, Andheri, Mumbai<br>
+                        Focused on Mathematics, Physics, Chemistry and Electronics
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Certificates Section -->
+    <section class="certificates" id="certificates">
+        <div class="certificates-bg">
+
+            <div class="certificates-overlay"></div>
+            <div class="certificates-container">
+                <h2>Certificates & Positions of Responsibility</h2>
+
+                <!-- <div class="cert-item">
+                    <h3>Unreal Engine Game Development Certificate</h3>
+                    <span class="date">2024</span>
+                    <p>
+                        Awarded by Game Institute for successful completion of 6-month Unreal Engine training
+                        program
+                        including Blueprints and C++ game development.
+                    </p>
+                </div> -->
+
+                <div class="cert-item">
+                    <h3>Lead Game Developer Intern</h3>
+                    <span class="date">Feb 2025 - May 2025</span>
+                    <p>
+                        Contributing to game mechanics and systems at a Asqure. Focused on
+                        multiplayer, animation, Level Designing, and optimization like tasks using Unreal Engine 5.
+                        Developed a multiplayer game set in Mumbai, handling level design, gameplay logic, and LAN
+                        multiplayer with session management and replication. Coded a fully functional character with
+                        complete animations.
+                    </p>
+                    <a href="https://drive.google.com/file/d/1zSG34I8Sqaln3wyapKbbKaUXyLZMs9uh/view" target="_blank"
+                        class="certificate-link">View Certificate</a>
+                </div>
+
+                <div class="cert-item">
+                    <h3>Team Head - Virtual Treasure Hunt and Gaming event in College</h3>
+                    <span class="date">2023</span>
+                    <p>
+                        I was the head of the team that organized a virtual treasure hunt event in college, where I
+                        managed a team of 5 members, coordinated with participants, and ensured smooth execution of the
+                        event. This experience helped me develop my leadership, communication, and organizational
+                        skills, as well as my ability to work under pressure and meet deadlines.
+                    </p>
+                    <a href="https://drive.google.com/file/d/1G-5nAYWzQ2isAoF85PhXcFf0UJkIDPvO/view" target="_blank"
+                        class="certificate-link">View Certificate</a>
+                </div>
+
+                <div class="cert-item">
+                    <h3>Team Leader and Volunteer in Crisis Management in College </h3>
+                    <span class="date">2023 - 2024</span>
+                    <p>
+                        I served as a team leader and volunteer in the Crisis Management team in college, where I
+                        coordinated with my team to ensure the safety and well-being of students during
+                        events. This role enhanced my crisis management, teamwork, and problem-solving skills, critical
+                        thinking,
+                        and decision-making abilities, as I had to quickly assess situations, communicate effectively,
+                        and
+                        preparing me to handle challenging situations effectively.
+                    </p>
+                    <a href="https://drive.google.com/file/d/1n6QHQM9W3cqbpK3QAAV8thYAKvKZARm9/view?usp=sharing"
+                        target="_blank" class="certificate-link">View Certificate</a>
+                </div>
+
+                <div class="cert-item">
+                    <h3>Got best in Academic Certificate in school </h3>
+                    <span class="date">2019</span>
+                    <p>
+                        I received the "Best in Academics" certificate in school for my outstanding academic performance
+                        and dedication to learning. This recognition reflects my commitment to excellence and my ability
+                        to consistently achieve high grades across various subjects, showcasing my strong work ethic and
+                        passion for knowledge.
+                    </p>
+                    <a href="https://drive.google.com/file/d/1w_M-Ng8fiOTIIEtOazZ8wPKZl_2qaQ7U/view" target="_blank"
+                        class="certificate-link">View Certificate</a>
+                </div>
+
+                <div class="cert-item">
+                    <h3>Attended Cyber Red Team Boot Camp on Ethical Hacking</h3>
+                    <span class="date">2019 - 2024</span>
+                    <p>
+                        I attended a Cyber Red Team Boot Camp focused on Ethical Hacking, where I gained hands-on
+                        experience in penetration testing, vulnerability assessment, and security analysis. This
+                        intensive training enhanced my understanding of cybersecurity principles and equipped me with
+                        practical skills to identify and mitigate security threats effectively.
+                    </p>
+                    <a href="https://drive.google.com/file/d/1dNYq54WX_LXUZAyAiGPID45Kel12-WTq/view" target="_blank"
+                        class="certificate-link">View Certificate</a>
+                </div>
+
+                <div class="cert-item">
+                    <h3>Lead many Group Projects in College</h3>
+                    <span class="date">2019 - 2024</span>
+                    <p>
+                        I have led numerous group projects in college, where I took on the role of team leader, managing
+                        project timelines, delegating tasks, and ensuring effective communication among team members. My
+                        leadership skills were instrumental in successfully completing these projects, fostering a
+                        collaborative environment, and achieving our academic goals.
+                    </p>
+                    <!-- <a href="/Certificates/Asqure_Certificate.pdf" target="_blank" class="certificate-link">View Certificate</a> -->
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="resume">
+        <div class="download-resume">
+            <a href="/Pdf/Sohail Shaikh Resume.pdf" download class="resume-btn">Download Resume</a>
+        </div>
+    </div>
+
+    <footer class="modern-footer" id="footer">
+        <div class="footer-content">
+            <!-- Left -->
+            <div class="footer-left">
+                <img src="/images/formal profile.jpg" alt="Logo" class="footer-logo" />
+
+                <p>
+                    Sohail crafts immersive game experiences blending tech & design to shape the future.
+                </p>
+
+            </div>
+
+            <!-- Center -->
+            <div class="footer-center">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Right -->
+            <div class="footer-right">
+                <h4>Contact Me</h4>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:sssohail2902@gmail.com">sssohail2902@gmail.com</a>
+                </p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+919022681364">+91 9022681364</a></p>
+
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/sohail._29/" target="_blank" title="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/SohailShaikh29/" target="_blank" title="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/SohailS78016159" target="_blank" title="Twitter"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/sohailshaikh29/" target="_blank" title="LinkedIn"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/sohail290204" target="_blank" title="Github"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.youtube.com/@ShaikhSohail02" target="_blank" title="YouTube"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Sohail Shaikh. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+    <!-- Back to top button -->
+    <button id="backToTop" title="Go to top">&#8679;</button>
+
+
+    <!-- Project cards -->
+    <script>
+        let currentIndex = 0;
+
+        function scrollProjects(direction) {
+            const carousel = document.getElementById('projectCarousel');
+            const cards = carousel.querySelectorAll('.project-card');
+            const cardWidth = cards[0].offsetWidth + 20; // Adjust 20 if you have card margin/gap
+            const totalCards = cards.length;
+
+            if (direction === 'right') {
+                currentIndex = Math.min(currentIndex + 1, totalCards - 1);
+            } else {
+                currentIndex = Math.max(currentIndex - 1, 0);
+            }
+
+            const scrollLeft = cards[currentIndex].offsetLeft - (carousel.offsetWidth / 2) + (cardWidth / 2);
+
+            carousel.scrollTo({
+                left: scrollLeft,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+
+    <!-- Nav Bar -->
+    <script>
+        const navbar = document.getElementById("navbar");
+        let lastScrollY = window.scrollY;
+        let isHovering = false;
+
+        window.addEventListener("scroll", () => {
+            const currentScrollY = window.scrollY;
+
+            if (!isHovering) {
+                if (currentScrollY > lastScrollY) {
+                    // Scroll down
+                    navbar.style.transform = "translateY(-100%)";
+                } else {
+                    // Scroll up
+                    navbar.style.transform = "translateY(0)";
+                }
+            }
+
+            lastScrollY = currentScrollY;
+        });
+
+        navbar.addEventListener("mouseenter", () => {
+            isHovering = true;
+            navbar.style.transform = "translateY(0)";
+        });
+
+        navbar.addEventListener("mouseleave", () => {
+            isHovering = false;
+        });
+    </script>
+
+    <!-- Back to Top -->
+    <script>
+        const backToTopBtn = document.getElementById("backToTop");
+
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 300) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        });
+
+        backToTopBtn.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+    </script>
+
+
+</body>
+
+</html>
