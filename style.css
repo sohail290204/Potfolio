@@ -46,7 +46,7 @@ nav a {
 
 .hero {
     height: 100vh;
-    background-image: url('Images/3bcc85ad-06e8-4949-958f-502bb60eda05.png');
+    background-image: url('3bcc85ad-06e8-4949-958f-502bb60eda05.png');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -273,7 +273,7 @@ html {
     margin-top: 50px;
     margin-bottom: 50px;
     padding: 50px;
-    background-image: url('/Images/AboutBg.png');
+    background-image: url('AboutBg.png');
     display: flex;
     border-radius: 24px;
     flex-direction: row;
@@ -466,7 +466,7 @@ html {
 .education-bg {
     transform: scale(1);
     position: relative;
-    background: url('/Images/Education.png') no-repeat center center/cover;
+    background: url('Education.png') no-repeat center center/cover;
     border-radius: 16px;
     overflow: hidden;
     padding: 80px 10%;
@@ -559,7 +559,7 @@ html {
 
 .certificates-bg {
     position: relative;
-    background: url('/Images/Certificate.png') no-repeat center center/cover;
+    background: url('Certificate.png') no-repeat center center/cover;
     border-radius: 16px;
     overflow: hidden;
     padding: 80px 10%;
