@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mad Wheels - Total Chaos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Rajdhani', sans-serif;
+            background-color: #0f0f0f;
+            color: white;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 97%;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.5);
+            /* semi-transparent navbar */
+            backdrop-filter: blur(2px);
+            /* frosted glass effect */
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        nav a {
+            margin-left: 1.5rem;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 20px;
+        }
+
+        .container {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            margin-top: 5rem;
+            text-align: center;
+        }
+
+        /* YouTube video */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            margin-bottom: 2rem;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+        }
+
+        /* Image Gallery 
+        .swiper {
+            width: 100%;
+            height: 300px;
+            margin-bottom: 2rem;
+        }*/
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .swiper-slide {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            gap: 1.5rem;
+            padding: 1rem;
+            scrollbar-width: none;
+        }
+
+        /* Description */
+        .description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 3rem;
+            margin-top: 3rem;
+        }
+
+        /* Buttons */
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .buttons a {
+            padding: 0.75rem 1.5rem;
+            background-color: #1db954;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .buttons a:hover {
+            background-color: #17a44c;
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2rem;
+            }
+
+            .buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .carousel-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin-bottom: 3rem;
+            margin-top: 3rem;
+
+        }
+
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            gap: 1.5rem;
+            padding: 1rem;
+            scrollbar-width: none;
+        }
+
+        .carousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        .project-card {
+            flex: 0 0 auto;
+            /* Prevent shrinking */
+            width: 400px;
+            height: 225px;
+            /* 16:9 ratio */
+            background: #1a1a1a;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+
+
+        .project-card h3 {
+            margin: 1rem 0 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+            padding: 0 1rem 1rem;
+        }
+
+        .arrow {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            font-size: 2rem;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .arrow.left {
+            position: absolute;
+            left: 0;
+        }
+
+        .arrow.right {
+            position: absolute;
+            right: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <script>
+        function scrollProjects(direction) {
+            const carousel = document.getElementById('projectimages');
+            const scrollAmount = 320;
+
+            if (direction === 'left') {
+                carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            } else {
+                carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <header id="navbar">
+        <div class="logo">Sohail Shaikh</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#projectimages">Images</a>
+            <a href="#description">Description</a>
+            <a href="#buttons">Download</a>
+        </nav>
+    </header>
+
+    <!-- Content Container -->
+    <div class="container">
+        <!-- Project Title -->
+        <h1 class="title">Mad Wheels - Total Chaos</h1>
+
+        <!-- YouTube Video -->
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Os3_FYVcL7w?si=MJxE8-7_qnMHFueU"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <!-- Image Gallery (Swiper) -->
+        <div class="carousel-container" id="projectimages">
+            <button class="arrow left" onclick="scrollProjects('left')">&#10094;</button>
+
+            <div class="carousel" id="projectCarousel">
+                <div class="project-card">
+                    <img src="MadWheels.png" alt="IMG1" />
+                </div>
+                <div class="project-card">
+                    <img src="MadWheels 1.png" alt="IMG2" />
+                </div>
+                <div class="project-card">
+                    <img src="MadWheels 2.png" alt="IMG3" />
+                </div>
+                <div class="project-card">
+                    <img src="MadWheels 3.png" alt="IMG4" />
+                </div>
+                <div class="project-card">
+                    <img src="MadWheels 4.png" alt="IMG5" />
+                </div>
+                <div class="project-card">
+                    <img src="MadWheels 5.png" alt="IMG6" />
+                </div>
+                <div class="project-card">
+                    <img src="MadWheels 6.png" alt="IMG7" />
+                </div>
+                <div class="project-card">
+                    <img src="MadWheels 7.png" alt="IMG8" />
+                </div>
+                <div class="project-card">
+                    <img src="MadWheels 8.png" alt="IMG9" />
+                </div>
+                <div class="project-card">
+                    <img src="MadWheels 9.png" alt="IMG10" />
+                </div>
+                <div class="project-card">
+                    <img src="MadWheels 10.png" alt="IMG11" />
+                </div>
+                <div class="project-card">
+                    <img src="MadWheels 11.png" alt="IMG12" />
+                </div>
+                <div class="project-card">
+                    <img src="MadWheels 12.png" alt="IMG13" />
+                </div>
+                <div class="project-card">
+                    <img src="MadWheels 13.png" alt="IMG14" />
+                </div>
+                <div class="project-card">
+                    <img src="MadWheels 14.png" alt="IMG15" />
+                </div>
+                <div class="project-card">
+                    <img src="MadWheels 15.png" alt="IMG16" />
+                </div>
+            </div>
+
+            <button class="arrow right" onclick="scrollProjects('right')">&#10095;</button>
+        </div>
+
+        <!-- Project Description -->
+        <div class="description" id="description">
+            Mad Wheels
+            Genre: Casual Driving Game <br>
+            Engine: Unreal Engine 5.5<br>
+            Platform: Android<br>
+            <br>
+            Mad Wheels is a casual driving game where players must safely navigate through a chaotic city filled with
+            reckless, unpredictable drivers. The game features five gameplay modes — Endless Run, Brake Fail, Speed Run
+            (Timer), Parking, and Low Fuel — each offering a unique driving challenge. To keep gameplay fresh, players
+            can choose from four different vehicles: Hatchback, Pickup, SUV, and Sports Car, each with its own strengths
+            and weaknesses.
+             <br><br>
+            Development Details: <br> <br>
+            Engine: Built using Unreal Engine 5.5 <br> <br>
+            Programming: Core game logic designed using a combination of Blueprints and C++
+            Vehicle System: Leveraged Unreal's Vehicle Plugin for physics-based driving mechanics <br>
+            <br> Assets: <br>Vehicle pack from Fab <br>
+            Low-poly city buildings sourced from Sketchfab <br>
+             <br>UI & Visuals:
+             <br>UI elements and menu buttons created with help from ChatGPT image generation <br>
+            <br> Audio: <br>
+           Integrated MetaSounds for realistic vehicle sound
+            Background music sourced from free online music libraries
+        </div>
+
+        <!-- GitHub & Download Links -->
+        <div class="buttons" id="buttons">
+            <a href="https://github.com/sohail290204/DrivingSimulator" target="_blank">GitHub</a>
+            <a href="https://krypton29.itch.io/mad-wheels" target="_blank">Download</a>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+
+    <script>
+        function scrollProjects(direction) {
+            const carousel = document.getElementById('projectCarousel');
+            const scrollAmount = 500;
+
+            if (direction === 'left') {
+                carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            } else if (direction === 'right') {
+                carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }
+    </script>
+    <script>
+        const navbar = document.getElementById("navbar");
+        const projects = document.getElementById("projectimages");
+
+        window.addEventListener("scroll", () => {
+            const triggerPoint = projects.offsetTop;
+            if (window.scrollY >= triggerPoint - 50) {
+                navbar.style.opacity = "0";
+                navbar.style.pointerEvents = "none";
+            } else {
+                navbar.style.opacity = "1";
+                navbar.style.pointerEvents = "auto";
+            }
+        });
+    </script>
+</body>
+
+
+</html>
